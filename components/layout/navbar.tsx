@@ -1,17 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Session } from "next-auth";
 import { useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { NavbarMenuModel } from "configs/NavBarConfig";
 
 export default function NavBar({
-  session,
   navbarMenu,
 }: {
-  session: Session | null;
   navbarMenu: NavbarMenuModel[];
 }) {
   const [isOpen, setIsOpen] = useState(false);
